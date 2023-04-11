@@ -10,8 +10,8 @@ public class LibraryTest {
     @Before
     public void setup(){
         library = new Library();
-        book1 = new Book ("The Hobbit", "JRR Tolkein", "Fantasy");
-        book2 = new Book ("Lord of the Rings", "JRR Tolkein", "Fantasy");
+        book1 = new Book ("The Hobbit", "JRR Tolkien", "Fantasy");
+        book2 = new Book ("Lord of the Rings", "JRR Tolkien", "Fantasy");
     }
 
 
