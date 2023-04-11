@@ -1,7 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class LibraryTest {
 
@@ -28,9 +28,15 @@ public class LibraryTest {
         assertEquals(1, library.bookCount());
     }
 
-//    @Test
-//    public void hasBookWithTitle(){
-//        library.addBook(book1);
-//        assertEquals(library.hasBookWithTitle("The Hobbit"));
-//    }
+    @Test
+    public void hasBookWithTitleTrue(){
+        library.addBook(book1);
+        assertTrue(library.bookInStock("The Hobbit"));
+    }
+
+    @Test
+    public void hasBookWithTitleFalse(){
+        library.addBook(book2);
+        assertFalse(library.bookInStock("The Hobbit"));
+    }
 }

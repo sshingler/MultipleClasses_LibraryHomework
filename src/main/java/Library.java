@@ -16,14 +16,14 @@ public class Library {
         this.books.add(book);
     }
 
-//    public boolean hasBookWithTitle(String title) {
-//        for (Book book : books){
-//            if (book.getTitle().equals(title)){
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
+    public boolean bookInStock (String title) {
+        for (Book book : books){
+            if (book.getTitle().equals(title)){
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 }
