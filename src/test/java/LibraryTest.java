@@ -27,4 +27,10 @@ public class LibraryTest {
         library.addBook(book1);
         assertEquals(1, library.bookCount());
     }
+
+//    @Test
+//    public void hasBookWithTitle(){
+//        library.addBook(book1);
+//        assertEquals(library.hasBookWithTitle("The Hobbit"));
+//    }
 }
