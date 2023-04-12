@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.logging.Handler;
 
 public class Library {
 
@@ -23,6 +25,22 @@ public class Library {
             }
         }
         return false;
+    }
+
+    public HashMap< String, Integer> genreFrequencies(){
+        HashMap <String, Integer> frequencies = new HashMap<>();
+
+        for (Book book : books) {
+            String genre = book.getGenre();
+            if (!frequencies.containsKey(genre)){
+                frequencies.put(genre, 1);
+            } else {
+                int previousFrequency = frequencies.get(genre);
+                int newFrequency = previousFrequency + 1;
+                frequencies.replace(genre, newFrequency);
+            }
+        }
+     return frequencies;
     }
 
 
